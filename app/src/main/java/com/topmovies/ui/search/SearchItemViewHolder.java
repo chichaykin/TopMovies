@@ -49,6 +49,7 @@ public class SearchItemViewHolder extends ItemViewHolder<SearchItem> {
         if (TextUtils.isEmpty(movie.getThumb())) {
             mPosterView.setVisibility(View.GONE);
         } else {
+            mPosterView.setVisibility(View.VISIBLE);
             Picasso.with(getContext())
                     .load(movie.getThumb())
                     .into(mPosterView);

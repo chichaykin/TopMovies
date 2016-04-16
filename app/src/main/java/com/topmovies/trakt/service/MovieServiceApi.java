@@ -15,6 +15,6 @@ public interface MovieServiceApi {
     Observable<List<Movie>> getMovies(@Query("page") int page);
 
     @GET("search?type=movie")
-    Observable<List<SearchItem>> search(@Query("query") String query);
+    Observable<List<SearchItem>> search(@Query("query") String query, @Query("page") int page);
 
 }

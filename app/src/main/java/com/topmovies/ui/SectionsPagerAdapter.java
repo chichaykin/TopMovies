@@ -6,13 +6,15 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.topmovies.R;
+import com.topmovies.ui.allmovies.TopMoviesListFragment;
+import com.topmovies.ui.search.SearchResultFragment;
 
 
-public class SectionsPagerAdapter
+class SectionsPagerAdapter
         extends FragmentPagerAdapter {
 
-    private CharSequence mTopMoviesSectionName;
-    private CharSequence mSearchSectionName;
+    private final CharSequence mTopMoviesSectionName;
+    private final CharSequence mSearchSectionName;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
         super(fm);

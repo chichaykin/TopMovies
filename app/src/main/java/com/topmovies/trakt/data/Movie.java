@@ -1,11 +1,12 @@
 package com.topmovies.trakt.data;
 
-
+@SuppressWarnings("unused")
 public class Movie {
-    String title;
-    int year;
-    String overview;
-    Ids ids;
+    private String title;
+    private int year;
+    private String overview;
+    private Ids ids;
+    private Images images;
 
     @Override
     public String toString() {
@@ -13,7 +14,8 @@ public class Movie {
                 "title='" + title + '\'' +
                 ", year=" + year +
                 ", overview='" + overview + '\'' +
-                ", ids=" + ids +
+                ", imdb=" + ids.imdb +
+                ", thumb=" + getThumb() +
                 '}';
     }
 
@@ -21,34 +23,32 @@ public class Movie {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public int getYear() {
         return year;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public String getOverview() {
+        return overview;
     }
 
-    public Ids getIds() {
-        return ids;
-    }
-
-    public void setIds(Ids ids) {
-        this.ids = ids;
+    public String getThumb() {
+        if (images != null && images.poster != null) {
+            return images.poster.thumb;
+        } else {
+            return null;
+        }
     }
 
     class Ids {
         String imdb;
+    }
 
-        @Override
-        public String toString() {
-            return "Ids{" +
-                    "imdb='" + imdb + '\'' +
-                    '}';
+    class Images {
+        Poster poster;
+
+        class Poster {
+            String thumb;
         }
     }
+
 }

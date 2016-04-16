@@ -1,8 +1,9 @@
 package com.topmovies.trakt.data;
 
+@SuppressWarnings("unused")
 public class SearchItem {
-    String score;
-    Movie movie;
+    private String score;
+    private Movie movie;
 
     @Override
     public String toString() {
@@ -10,5 +11,9 @@ public class SearchItem {
                 "score='" + score + '\'' +
                 ", movie=" + movie +
                 '}';
+    }
+
+    public Movie getMovie() {
+        return movie;
     }
 }

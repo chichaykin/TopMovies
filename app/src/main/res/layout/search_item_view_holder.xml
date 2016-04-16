@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        tools:text="Breaking Bad" />
+
+    <TextView
+        android:id="@+id/year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/text_margin"
+        android:layout_toRightOf="@id/title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        tools:text="2012" />
+
+    <ImageView
+        android:id="@+id/poster"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/title"
+        android:layout_marginRight="@dimen/text_margin_horizontal"
+        android:scaleType="fitStart"
+        android:visibility="visible"
+        tools:src="@drawable/sample_thumb"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/overview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_toEndOf="@id/poster"
+        android:layout_toRightOf="@id/poster"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        tools:text="@string/overview" />
+
+</RelativeLayout>

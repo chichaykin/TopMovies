@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+import butterknife.BindView;
 import com.topmovies.R;
 import com.topmovies.presenters.search.SearchPresenter;
 import com.topmovies.presenters.search.SearchPresenterImpl;
@@ -22,7 +23,6 @@ import com.topmovies.ui.recyclerview.EndlessOnScrollListenerImpl;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 import uk.co.ribot.easyadapter.EasyRecyclerAdapter;
 
@@ -30,11 +30,11 @@ import uk.co.ribot.easyadapter.EasyRecyclerAdapter;
 public class SearchResultFragment extends Fragment implements SearchView {
 
     @SuppressWarnings("WeakerAccess")
-    @Bind(R.id.search_request)
+    @BindView(R.id.search_request)
     EditText mRequestView;
 
     @SuppressWarnings("WeakerAccess")
-    @Bind(R.id.search_results)
+    @BindView(R.id.search_results)
     RecyclerView mRecyclerView;
 
     private SearchPresenter mPresenter;

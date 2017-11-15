@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import butterknife.BindView;
 import com.topmovies.R;
 import com.topmovies.presenters.Presenter;
 import com.topmovies.presenters.allmovies.AllMoviesView;
@@ -19,7 +20,6 @@ import com.topmovies.ui.recyclerview.EndlessOnScrollListenerImpl;
 
 import java.util.List;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 import uk.co.ribot.easyadapter.EasyRecyclerAdapter;
 
@@ -27,7 +27,7 @@ import uk.co.ribot.easyadapter.EasyRecyclerAdapter;
 public class TopMoviesListFragment extends Fragment implements AllMoviesView {
 
     @SuppressWarnings("WeakerAccess")
-    @Bind(R.id.recycler_view)
+    @BindView(R.id.recycler_view)
     RecyclerView mRecyclerView;
 
     private EasyRecyclerAdapter<Movie> mAdapter;
